@@ -26,6 +26,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+## Tools
+
 1. stackblitz.com
 2. conemu cmd tool
 3. codelyzer
@@ -33,5 +35,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 5. windows vs code
 6. api.chucknorris.io
 7. json interface
-- url kopieren
-- strg+alt+x :O
+    - url kopieren
+    - strg+alt+x :O
