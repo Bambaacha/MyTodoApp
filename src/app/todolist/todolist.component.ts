@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { empty } from 'rxjs';
+import { ChucknorrisService } from '../chucknorris.service';
 
 @Component({
   selector: 'app-todolist',
@@ -11,6 +12,11 @@ export class TodolistComponent {
   todos = [];
   isEditMode = false;
   updateTodoIndex = -1;
+  jokeText = ``;
+
+  constructor(private chucknorrisService: ChucknorrisService) {
+
+  }
 
   addTodo() {
     if (this.todoText) {
@@ -34,5 +40,9 @@ export class TodolistComponent {
 
   removeTodo(todoIndex: number) {
     this.todos.splice(todoIndex, 1);
+
+    this.chucknorrisService.getJoke().subscribe(joke => {
+      this.jokeText = joke.value;
+    });
   }
 }

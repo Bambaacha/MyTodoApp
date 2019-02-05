@@ -31,3 +31,8 @@ conemu cmd tool
 codelyzer
 reactivex.io
 windows vs code
+api.chucknorris.io
+
+##### json interface
+- url kopieren
+- strg+alt+x :O
