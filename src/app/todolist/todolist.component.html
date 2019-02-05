@@ -8,4 +8,4 @@
   <input  type="text" [(ngModel)]="todoText"><button (click)="updateTodo()">OK</button>
 </div>
 
-<app-listbox [items]="todos"></app-listbox>
+<app-listbox [items]="todos" (editItemClick)="editTodo($event)" (removeItemClick)="removeTodo($event)"></app-listbox>

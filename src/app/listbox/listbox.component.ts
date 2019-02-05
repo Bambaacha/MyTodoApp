@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-listbox',
@@ -9,6 +9,16 @@ export class ListboxComponent {
   @Input()
   items = [];
 
-  editItem(index: number) {}
-  removeItem(index: number) {}
+  @Output()
+  editItemClick = new EventEmitter<number>();
+
+  @Output()
+  removeItemClick = new EventEmitter<number>();
+ 
+  editItem(index: number) {
+    this.editItemClick.emit(index);
+  }
+  removeItem(index: number) {
+    this.removeItemClick.emit(index);
+  }
 }
