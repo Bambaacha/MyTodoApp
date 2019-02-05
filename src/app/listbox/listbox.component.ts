@@ -14,7 +14,7 @@ export class ListboxComponent {
 
   @Output()
   removeItemClick = new EventEmitter<number>();
- 
+
   editItem(index: number) {
     this.editItemClick.emit(index);
   }
