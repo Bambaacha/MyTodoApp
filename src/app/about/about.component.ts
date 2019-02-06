@@ -9,8 +9,8 @@ import { ChucknorrisService } from '../chucknorris.service';
 export class AboutComponent implements OnInit {
   jokeText = '';
 
-  constructor(chucknorrisService: ChucknorrisService) { 
-    this.jokeText = chucknorrisService.lastJokeText
+  constructor(chucknorrisService: ChucknorrisService) {
+    this.jokeText = chucknorrisService.lastJokeText;
   }
 
   ngOnInit() {

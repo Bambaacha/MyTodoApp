@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { empty } from 'rxjs';
+import { Component, Injectable } from '@angular/core';
 import { ChucknorrisService } from '../chucknorris.service';
 import { Router } from '@angular/router';
 
@@ -8,15 +7,19 @@ import { Router } from '@angular/router';
   templateUrl: './todolist.component.html',
   styleUrls: ['./todolist.component.css']
 })
+
+@Injectable()
 export class TodolistComponent {
   todoText = 'foobar';
   todos = [];
   isEditMode = false;
   updateTodoIndex = -1;
-  jokeText = ``;
+  jokeText = '';
+  jokeService$;
 
   constructor(private chucknorrisService: ChucknorrisService, private router: Router) {
-    
+    this.jokeService$ = this.chucknorrisService.getJoke();
+    chucknorrisService.loadJoke.subscribe(() => this.loadJoke());
   }
 
   addTodo() {
@@ -41,10 +44,12 @@ export class TodolistComponent {
 
   removeTodo(todoIndex: number) {
     this.todos.splice(todoIndex, 1);
+    this.loadJoke();
+  }
 
+  loadJoke() {
     this.chucknorrisService.getJoke().subscribe(joke => {
-      this.jokeText =joke.value;
-      this.chucknorrisService.lastJokeText = joke.value;
+      this.jokeText = joke.value;
     });
   }
 

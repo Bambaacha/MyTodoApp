@@ -37,7 +37,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
       { path: '**', component: NotFoundComponent }
     ])
   ],
-  providers: [],
+  providers: [ TodolistComponent ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
