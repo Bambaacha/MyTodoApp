@@ -1,13 +1,20 @@
-
 <div *ngIf="!isEditMode">
   <h3>Neue Todo:</h3>
-  <input appAutoInputWidth="400" type="text" [(ngModel)]="todoText"><button (click)="addTodo()">OK</button>
+  <div class="ui input focus">
+    <input appAutoInputWidth="400" type="text" [(ngModel)]="todoText"><button (click)="addTodo()" class="ui button">OK</button>
+  </div>
 </div>
-<div *ngIf="isEditMode">
+<div *ngIf="isEditMode" class="ui input focus">
   <h3>Todo bearbeiten:</h3>
-  <input  type="text" [(ngModel)]="todoText"><button (click)="updateTodo()">OK</button>
+  <div class="ui input focus">
+    <div class="row">
+      <input  type="text" [(ngModel)]="todoText"><button (click)="updateTodo()" class="ui button">OK</button>
+    </div>
+  </div>
 </div>
 
 <app-listbox [items]="todos" (editItemClick)="editTodo($event)" (removeItemClick)="removeTodo($event)"></app-listbox>
 
 <h3>{{ jokeText }}</h3>
+
+<button (click)="goToAbout()" class="ui button">Go to About</button>

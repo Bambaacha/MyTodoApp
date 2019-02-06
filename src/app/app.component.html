@@ -2,4 +2,6 @@
   {{ title }}
 </h1>
 
-<app-todolist></app-todolist>
+<a routerLink="/" routerLinkActive="currentSite" [routerLinkActiveOptions]="{ exact: true }">Home</a> || <a routerLink="/about" routerLinkActive="currentSite">About</a>
+
+<router-outlet></router-outlet>

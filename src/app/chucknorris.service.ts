@@ -5,7 +5,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ChucknorrisService {
-
+  lastJokeText = '';
+  
   constructor(private httpClient: HttpClient) { }
 
   getJoke() {
