@@ -14,6 +14,7 @@ import { MyuppercasePipe } from './myuppercase.pipe';
 import { RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: TodolistComponent },
-      { path: 'about', component: AboutComponent },
+      { path: 'about', component: AboutComponent, canActivate: [AuthGuard] },
       { path: '**', component: NotFoundComponent }
     ])
   ],

@@ -49,3 +49,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 `ng g s "Name"` = create service
 
 `ng g p "Name"` = create pipe
+
+`ng g g "Name"` = create guard
