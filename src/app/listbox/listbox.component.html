@@ -1,7 +1,7 @@
 <table style="padding: 20px 0 0 50px;">
   <tr *ngFor="let item of items; let i = index">
     <th>
-      <span (click)="editItem(i)">{{ item }}</span>
+      <span (click)="editItem(i)">{{ item | myuppercase }}</span>
     </th> 
     <th>
       <button (click)="removeItem(i)">X</button>
