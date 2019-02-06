@@ -1,6 +1,7 @@
 import { Component, Injectable } from '@angular/core';
 import { ChucknorrisService } from '../chucknorris.service';
 import { Router } from '@angular/router';
+import { takeWhile } from 'rxjs/operators';
 
 @Component({
   selector: 'app-todolist',
@@ -16,12 +17,16 @@ export class TodolistComponent {
   updateTodoIndex = -1;
   jokeText = '';
   jokeService$;
+  active = true;
 
   constructor(private chucknorrisService: ChucknorrisService, private router: Router) {
     this.jokeService$ = this.chucknorrisService.getJoke();
-    chucknorrisService.loadJoke.subscribe(() => this.loadJoke());
+    chucknorrisService.loadJoke.pipe( takeWhile(() => this.active)).subscribe(() => this.loadJoke());
   }
 
+  ngOnDestroy() {
+    this.active = false;
+  }
   addTodo() {
     if (this.todoText) {
       this.todos.push(this.todoText);

@@ -4,10 +4,10 @@
 
 <div class="ui grid">
   <div class="sixteen wide column">
-    <button (click)="jokeLoad();bubble = true" class="ui button">Load Joke</button>
+    <button (click)="jokeLoad();" class="ui button">Load Joke</button>
   </div>
 </div>
-<div *ngIf="bubble">{{ loadJokeText }}</div>
+
 <router-outlet></router-outlet>
 
 <a routerLink="/" routerLinkActive="currentSite" [routerLinkActiveOptions]="{ exact: true }">Home</a> || <a routerLink="/about" routerLinkActive="currentSite">About</a>
