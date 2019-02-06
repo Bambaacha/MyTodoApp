@@ -39,3 +39,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     - strg+alt+x :O
 8. nodeschool.io
 9. jakearchibald.com
+
+## Commands
+
+`ng g c "Name"` = create component
+`ng g s "Name"` = create service
+`ng g p "Name"` = create pipe

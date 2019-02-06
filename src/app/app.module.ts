@@ -8,6 +8,7 @@ import { TodolistComponent } from './todolist/todolist.component';
 import { WatermarkDirective } from './watermark.directive';
 import { AutoInputWidthDirective } from './auto-input-width.directive';
 import { ListboxComponent } from './listbox/listbox.component';
+import { MyuppercasePipe } from './myuppercase.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ListboxComponent } from './listbox/listbox.component';
     TodolistComponent,
     WatermarkDirective,
     AutoInputWidthDirective,
-    ListboxComponent
+    ListboxComponent,
+    MyuppercasePipe
   ],
   imports: [
     BrowserModule,
