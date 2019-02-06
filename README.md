@@ -44,6 +44,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 `ng g c "Name"` = create component
 
+`ng g d "Name"` = create directive
+
 `ng g s "Name"` = create service
 
 `ng g p "Name"` = create pipe
