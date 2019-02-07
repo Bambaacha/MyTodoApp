@@ -33,7 +33,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 3. codelyzer
 4. reactivex.io
 5. windows vs code
-6. api.chucknorris.io
+6. API´s
+    - api.chucknorris.io
+    - swapi.co
 7. json interface
     - url kopieren
     - strg+alt+x :O
